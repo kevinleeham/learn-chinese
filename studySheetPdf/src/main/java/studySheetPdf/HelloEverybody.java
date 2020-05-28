@@ -24,7 +24,7 @@ public class HelloEverybody {
 
 		System.out.println(pdfFile.getAbsolutePath());
 
-		// create the three fonts we want in our Study Sheet
+		// create the fonts we want in our Study Sheet
 		boolean embedded = true;
 		try {
 			PdfFont pdfFontEnglish = PdfFontFactory.createFont(this.FONT_FILE_ENGLISH, embedded);
@@ -34,7 +34,7 @@ public class HelloEverybody {
 			PdfDocument pdfDocument = new PdfDocument(new PdfWriter(pdfFile));
 			Document document = new Document(pdfDocument, PageSize.LETTER.rotate());
 
-			// add three sample paragraphs
+			// add sample paragraphs
 			document.add(new Paragraph("Hello everybody!").setFont(pdfFontEnglish).setFontSize(22).setFontColor(FONT_COLOR));
 			document.add(new Paragraph("大家好！").setFont(pdfFontChinese).setFontSize(22).setFontColor(FONT_COLOR));
 
